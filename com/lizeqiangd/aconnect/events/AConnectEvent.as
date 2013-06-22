@@ -10,6 +10,11 @@ package com.lizeqiangd.aconnect.events
 	
 	public class AConnectEvent extends Event
 	{
+		public static const  MESSAGE:String = "message"
+		public static const  SOCKET_STATE:String = "socket_state"
+		public static const  SOCKET_CONNECT:String = "socket_connected"
+		public static const  SOCKET_ERROR:String = "socket_error"
+		public static const  SOCKET_CLOSED:String = "socket_closed"
 		public static const  SOCKET_DATA:String = "socket_data"
 		
 		public var data:*;

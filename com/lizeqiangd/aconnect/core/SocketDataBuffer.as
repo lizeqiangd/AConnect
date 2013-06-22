@@ -17,8 +17,7 @@ package com.lizeqiangd.aconnect.core
 		}
 		public function set getSocketData(e:String):void
 		{
-			bufferData += e
-			
+			bufferData += e			
 			cherkSocketDataEnd()
 		}
 		
@@ -28,7 +27,7 @@ package com.lizeqiangd.aconnect.core
 			//trace(index)
 			if (index > 0)
 			{	//trace(bufferData.slice(0, index))
-				_eventDispatch.dispatchEvent(new AConnectEvent(AConnectEvent.SOCKET_DATA,bufferData.slice(0, index)))
+				_eventDispatch.dispatchEvent(new AConnectEvent(AConnectEvent.MESSAGE,bufferData.slice(0, index)))
 				bufferData = bufferData.slice(index + AConnectSetting.SocketDataEndMark.length)
 				//trace(bufferData.slice(0, index))
 			}
